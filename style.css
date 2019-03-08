@@ -70,7 +70,30 @@ nav {
     padding-right: 22px;
     padding-left: 69px;
 }
-
+.dot-right {
+    width: 2px;
+	height: 2px;
+	background: #474c5f;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+    border-radius: 1px;
+    position: absolute;
+    left: 50%;
+    margin: -27px 0 0 107px;;
+    padding: 0;
+}
+.dot-left {
+	width: 2px;
+	height: 2px;
+	background: #474c5f;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+    border-radius: 1px;
+    position: absolute;
+    left: 50%;
+    margin: -27px 0 0 -118px;;
+    padding: 0;
+}
 
 
 
