@@ -1,6 +1,5 @@
 body {
     font-family: 'Lato', sans-serif;
-  
     background-color: #fff;
 }
 header {
@@ -21,8 +20,8 @@ nav {
 .triangle{
 	width: 0;
 	height: 0;
-	border-left: 46px solid transparent;
-	border-right: 46px solid transparent;
+	border-left: 46px solid #fff;
+	border-right: 46px solid #fff;
     border-top: 26px solid #323232;
     position: absolute;
     left: 50%;
@@ -94,47 +93,118 @@ nav {
     margin: -27px 0 0 -118px;;
     padding: 0;
 }
+
 .hexagon {
-	width: 180px;
-	height: 203px;
-	background: red;
-    position: relative;
+    width: 180px;
+    height: 242px;
+    transform: rotate(120deg);
     overflow: hidden;
+    visibility: hidden;
+    display: inline-block;
+    margin: -74px 20px 0 0;
+    position: relative;
+    top: 145px;
+    left: 10px;
     
 }
-.hexagon:before {
-	content: "";
-	position: absolute;
-	top: 0px; 
-	left: 0;
-	width: 0;
-	height: 0;
-	border-left: 90px solid #ffffff;
-	border-right: 90px solid #ffffff;
-    border-bottom: 50px solid transparent;
-    z-index: 1;
-}  
-.hexagon:after {
-	content: "";
-	position: absolute;
-	bottom: 0; 
-	left: 0;
-	width: 0;
-	height: 0;
-	border-left: 90px solid #ffffff;
-	border-right: 90px solid #ffffff;
-    border-top: 50px solid transparent;
-    z-index: 1;
+.hex-layer-1 {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-60deg);
+    overflow: hidden;
+    visibility: hidden;
 }
-.hexagon img {
-  
+.hex-layer-2 {
+    width: 100%;
+    height: 100%;
+    background: #ccc3;
+    transform: rotate(-60deg);
+    visibility: visible;
+    overflow: hidden;
+}
+.hex-layer-2 img {
     position: absolute;
-    top: 62%;
-    transform: translate(-10%, -63%);
+    left: 50%;
+    transform: translate(-50%, 3%);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+.hexagon:hover {
+    transform: rotate(480deg);
+    transition: transform 0.8s cubic-bezier(1, 0, 0, 1);
+}
+
+
+.hexagon-container {
+    height: 721px;
+}
+.hexagon-container::before{
+    content: '';
+    display: block;
+    width: 140px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;   
+    background-color: #fff;
+
+}
+.hexagon-container::after {
+    content: '';
+    display: block;
+    width: 1020px;
+    height: 232px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -111%);
+    z-index: -1;   
+    background-color: #fff;
+}
+
+.container::before {
+    content: '';
+    width: 960px;
+    height: 697px;
+    margin-top: 11px;
+    border-top: 1px solid  #e4e9eb;
+    border-bottom: 1px solid  #e4e9eb;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;    
+}
+.container::after {
+    content: '';
+    width: 820px;
+    height: 441px;
+    margin-top: 11px;
+    border-left: 1px solid  #e4e9eb;
+    border-right: 1px solid  #e4e9eb;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    z-index: -2;    
 }
 
 
 
+/* .hexagon-container div:nth-child(1)::after {
+    content: '';
+    border-left: 10px solid black;
+    
+    height: 104px;
+    display: block;
+    position: relative;
+    top:205px;
+    
+    z-index: 1;
+} */
 
 
 
