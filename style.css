@@ -1,25 +1,80 @@
 body {
     font-family: 'Lato', sans-serif;
     background-color: #fff;
+    color: #d7fcf5;
 }
 header {
     
     background-color: #323232;
 }
-div {
-    box-sizing: border-box;
-    
-    /* border: 10px solid red; */
-    margin: 0 auto;
-    
-}
+
+
+@font-face {
+    font-family: 'fontello';
+    src: url('font/fontello.eot?67784164');
+    src: url('font/fontello.eot?67784164#iefix') format('embedded-opentype'),
+         url('font/fontello.woff2?67784164') format('woff2'),
+         url('font/fontello.woff?67784164') format('woff'),
+         url('font/fontello.ttf?67784164') format('truetype'),
+         url('font/fontello.svg?67784164#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+  /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+  /*
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: 'fontello';
+      src: url('../font/fontello.svg?67784164#fontello') format('svg');
+    }
+  }
+  */
+   
+   [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+   
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+   
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+   
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+   
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+   
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+   
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+   
+  .icon-gplus:before { content: '\f05a'; } /* '' */
+  .icon-twitter:before { content: '\f099'; } /* '' */
+  .icon-linkedin:before { content: '\f0e1'; } /* '' */
+  .icon-facebook:before { content: '\f300'; } /* '' */
+  .icon-pinterest:before { content: '\f312'; } /* '' */
+  .icon-dribbble:before { content: '\f31b'; } /* '' */
 nav {
     height: 63px;
     margin: 0 auto;
-}
-.title {
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 24px; 
 }
 .triangle{
 	width: 0;
@@ -41,7 +96,6 @@ nav {
     padding: 0;
 }
 .menu {
-    
     text-align: center;
     list-style: none;
     font-size: 10px;
@@ -49,10 +103,9 @@ nav {
     margin: 0 0 0 5px;
     padding: 0;
 }
-.menu-item{
+.menu-item {
     display: inline-block;    
     margin-top: 31px;
-    
 }
 
 .menu-item a {
@@ -98,7 +151,8 @@ nav {
     padding: 0;
 }
 
-.hexagon {
+.hexagon,
+.hexagon-author {
     width: 180px;
     height: 242px;
     transform: rotate(120deg);
@@ -128,8 +182,9 @@ nav {
 }
 .hex-layer-2 img {
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 3%);
+    transform: translate(-50%, -50%);
 }
 
 .row {
@@ -197,12 +252,208 @@ nav {
 }
 h1,
 h2  {
+    margin-bottom: -4px;
     font-family: 'Maven Pro', sans-serif;
-    font-size: 40px;
+    font-size: 29px;
 }
+
 .info {
-    background-color: #2eb398;
+    background: #2eb398;
+    height: 341px;
 }
+.info-container {
+   height: 316px;
+   width: 820px;
+   border-left:1px solid  #219d84;;
+   border-right:1px solid  #219d84;
+   margin: auto;
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+}
+.hexagon-author {
+    position: relative;
+    top: 112px;
+    left: 20px;
+}
+.text-info {
+    width: 580px;
+    height: 206px;
+    position: relative;
+    left: 50%;
+    transform: translate(-33%, -58%)
+}
+
+.text-info p {
+    font-size: 12px;
+    line-height: 1.9;
+}
+p.title {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 18px; 
+    color: #20816d;
+    margin-bottom: 4px;
+}
+.social li {
+    display: inline-block;
+}
+
+.social-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 25px;
+    height: 24px;
+    background: #a4dbd4;
+    font-size: 12px;
+    color: #07ad97;
+    margin-right: -4px
+}
+.twitter,
+.gplus,
+.dribbble {
+    background: #6ccbbe;
+}
+
+.social {
+    margin: 35px 4px 0 0;
+    float: right;
+}
+.social-item:hover {
+    background: #323232;
+    color: #fff;
+}
+.get-in-touch {
+    background: #323232;
+    display: block;
+    height: 607px;
+}
+.border-container {
+    height: 564px;
+    margin: auto;
+    width: 960px; 
+}
+.get-in-touch-container {
+    height: 538px;
+    margin: auto;
+    width: 960px;
+    border-top: 1px solid #2b2b2b;
+    border-bottom: 1px solid #2b2b2b;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.in-touch-form {
+    width: 580px;
+    float: left;
+    margin-left: 90px; 
+  
+}
+.contacts-info {
+    width: 180px;
+    float: right;
+    font-size: 12px;
+    line-height: 1.9;
+    margin: -5px 90px 0 0; 
+    color: #a2a2a2;
+    font-weight: 700;
+}
+.contacts {
+    margin-top: 30px;
+}
+.input-text,
+.area{
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    color: #bebebe;
+    background: #454545;
+    width: 100%;
+    padding-left: 14px;
+    box-sizing: border-box;
+} 
+.input-text {
+    margin-bottom:17px;
+    height: 37px;
+}
+.area {
+    resize: none;
+    margin-bottom: 14px;
+    height: 150px;
+    padding-top: 12px;
+}
+.button-submit {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    background: #2eb398;
+    border: none;
+    color: #d7fcf5;
+    height: 37px;
+    width: 90px;
+    float: right;
+}
+.get-in-touch-title{
+    margin: 50px 0 20px 90px;
+}
+.get-in-touch-title h2 {
+    margin-bottom: 4px;
+    color: #e0e0e0;
+}
+.get-in-touch-title p {
+    color: #999999; 
+}
+.contacts li:nth-child(1)::before {
+    content: '';
+    background:url(assets/icons/location.png) no-repeat;
+    float:left; 
+    width:11px;
+    height:11px;
+    padding-left: 0;
+    margin: 6px 12px 0 0;
+}
+[href="tel:+35283318635"]::before {
+    content: url(assets/icons/phone.png);
+    margin-right: 12px;
+}
+[href="mailto:info@hexalcorp.com"]::before {
+    content: url(assets/icons/mail.png);
+    margin-right: 10px;
+}
+.contacts a {
+    text-decoration: none;
+    color: #a2a2a2;
+}
+.contacts-info span {
+    font-weight: 900;
+}
+.copyright {
+    height: 43px;
+    width: 100%;
+    background: #222222;
+}
+.copyright-text {
+    font-size: 12px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 265px;
+    color: #393939;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

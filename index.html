@@ -14,10 +14,10 @@
     <header>
             <nav>
                 <ul class="menu">
-                    <li class="menu-item"><a href="#">portfolio</a> </li>
-                    <li class="menu-item"><a href="#">about</a> </li>
-                    <li class="menu-item"><a href="#">blog</a></li>
-                    <li class="menu-item"><a href="#">get in touch</a></li>
+                    <li class="menu-item"><a href="#portfolio">portfolio</a> </li>
+                    <li class="menu-item"><a href="#about">about</a> </li>
+                    <li class="menu-item"><a href="#blog">blog</a></li>
+                    <li class="menu-item"><a href="#get-in-touch">get in touch</a></li>
                 </ul>
             </nav>
             <div class="triangle"></div>
@@ -28,6 +28,7 @@
     </header>
     <main>
         <section class="hexagon-container">
+            <a name="portfolio"></a>
             <div class="container">
                 <div class="row">
                     <div class="hexagon">
@@ -130,58 +131,72 @@
                 </div>             
         </section>
         <section class="info">
-            <div class="info-container">
-                <article>
-                    <img src="" alt="">
+            <a name="about"></a>
+            <article class="info-container">
+                <div class="hexagon-author">
+                    <div class="hex-layer-1">
+                        <div class="hex-layer-2">
+                            <img src="assets/author.png" alt="author">
+                        </div>
+                    </div>         
+                </div>
+                <div class="text-info">
                     <h1>Smith Anderson</h1>
-                    <div class="title">Illustrator & Character Designer</div>
-                    <div></div>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor, nibh at sagittis tristique, enim magna pretium augue, eget consectetur sem dui non urna. Integer gravida, diam congue molestie fringilla, elit odio rhoncus turpis, ac dictum libero elit vel metus. Morbi egestas sit amet velit eget venenatis. Mauris porttitor, nibh at sagittis tristique, enim magna pretium augue, eget consectetur sem dui non urna
-                        </p>
-                    </div>
-                    <div></div>
-                </article>
-            </div>
+                    <p class="title">Illustrator & Character Designer</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor, nibh at sagittis tristique, enim magna pretium augue, eget consectetur sem dui non urna. Integer gravida, diam congue molestie fringilla, elit odio rhoncus turpis, ac dictum libero elit vel metus. Morbi egestas sit amet velit eget venenatis. Mauris porttitor, nibh at sagittis tristique, enim magna pretium augue, eget consectetur sem dui non urna
+                    </p>
+                    <ul class="social">
+                        <a name="blog"></a>
+                        <li><a class="social-item facebook" href="https://www.facebook.com/" target="_blank"><i class="icon-facebook"></i></a></li>
+                        <li><a class="social-item twitter" href="https://twitter.com/" target="_blank"><i class="icon-twitter"></i></a></li>
+                        <li><a class="social-item gplus" href="https://plus.google.com/" target="_blank"><i class="icon-gplus"></i></a></li>
+                        <li><a class="social-item pinterest" href="https://www.pinterest.com" target="_blank"><i class="icon-pinterest"></i></a></li>
+                        <li><a class="social-item linkedin" href="https://www.linkedin.com/" target="_blank"><i class="icon-linkedin"></i></a></li>
+                        <li><a class="social-item dribbble" href="https://dribbble.com" target="_blank"><i class="icon-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </article>
         </section>
     </main>
   
-    <footer>
-        
-        <div class="containe">
-            <h2>Get In Touch</h2>
-            <div class="title">
-                In order to get in touch use the contact form below:
+    <footer class="get-in-touch">
+            <div class="border-container">
+                <div class="get-in-touch-container">
+                    <a name="get-in-touch"></a>
+                    <div class="get-in-touch-title">  
+                        <h2>Get In Touch</h2>
+                        <p class="title">
+                            In order to get in touch use the contact form below:
+                        </p>
+                    </div>
+                    <div class="in-touch-form">
+                        <form action="#" method="GET">
+                            <fieldset>
+                                <input class="input-text" type="text" placeholder="Name (Required)" required><br>
+                                <input class="input-text" type="email" placeholder="Email (Required)" required><br>
+                                <input class="input-text" type="text" placeholder="Subject"><br>
+                                <textarea class="area" name="" placeholder="Write your message here..."></textarea>
+                            </fieldset>
+                            <button class="button-submit" type="submit">SEND</button>
+                        </form>
+                    </div>
+                    <div class="contacts-info">
+                        <p>
+                            <span>Quisque Hendrerit:</span> purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus morbi vitae. 
+                        </p>
+                        <ul class="contacts">
+                            <li><a>Elm St. 14/05 Lost City</a></li>
+                            <li><a class="phone" href="tel:+35283318635">+ 3528 331 86 35</a></li>
+                            <li><a class="mail" href="mailto:info@hexalcorp.com">info@hexalcorp.com</a></li>
+                        </ul>
+                    </div>
             </div>
-            <div>
-                <form action="# " method="post" class="in-touch-form">
-                    <fieldset>
-                        <input class="input-text" type="text" placeholder="Name(Required)" required>
-                        <input class="input-text" type="email" placeholder="Email(Required)" required>
-                        <input class="input-text" type="text" placeholder="Subject">
-                        <textarea class="input-text" name="" id="" cols="30" rows="10" placeholder="Write your message here..."></textarea>
-                    </fieldset>
-                    <button class="button-submit" type="submit">SEND</button>
-                </form>
-            </div>
-            <div>
-                <p>
-                    <span>Quisque Hendrerit:</span> purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus morbi vitae. 
-                </p>
-            </div>
-            <div>
-                <ul class="contacts">
-                    <li class="contact-item"><img src="assets/icons/location.png" alt="" srcset="">Elm St. 14/05 Lost City</li>
-                    <li class="contact-item"><img src="assets/icons/phone.png" alt="" srcset="">+ 3528 331 86 35 </li>
-                    <li class="contact-item"><img src="assets/icons/mail.png" alt="" srcset="">info@hexalcorp.com</li>
-                </ul>
-            </div>
-            <div class="copyright">
-                <p class="copyright-text">
-                    © Copyright 2013 by PSDchat
-                </p>
-            </div>
+        </div>
+        <div class="copyright">
+            <p class="copyright-text">
+                © Copyright 2013 by PSDchat
+            </p>
         </div>
     </footer>   
 </body>
