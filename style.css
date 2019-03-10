@@ -17,6 +17,10 @@ nav {
     height: 63px;
     margin: 0 auto;
 }
+.title {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 24px; 
+}
 .triangle{
 	width: 0;
 	height: 0;
@@ -191,22 +195,14 @@ nav {
     transform: translate(-50%, -85%);
     z-index: -2;    
 }
-
-
-
-/* .hexagon-container div:nth-child(1)::after {
-    content: '';
-    border-left: 10px solid black;
-    
-    height: 104px;
-    display: block;
-    position: relative;
-    top:205px;
-    
-    z-index: 1;
-} */
-
-
+h1,
+h2  {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 40px;
+}
+.info {
+    background-color: #2eb398;
+}
 
 
 
